@@ -3,7 +3,24 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const defaultEndpoint = "https://rickandmortyapi.com/api/character/"
+
+export async function getServerSideProps() {
+  const res = await fetch(defaultEndpoint);
+  const data = await res.json();
+  return {
+    props: {
+     data 
+    }
+  }
+}
+
+
+type Props = {}
+
+
+
+const Home: NextPage= (props: Props) => {
   return (
     <div className={styles.container}>
       <Head>
