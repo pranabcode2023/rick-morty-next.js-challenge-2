@@ -6,26 +6,35 @@ import styles from '../styles/Home.module.css'
 
 const defaultEndpoint = "https://rickandmortyapi.com/api/character/"
 
-// interface result {
-//   id: string;
-//   name: string;
-  
-// }
+interface result {
+  id: string;
+  name: string;
+  image: string
+}
 
-export async function getServerSideProps() {
+// export async function getServerSideProps() {
+//   const res = await fetch(defaultEndpoint);
+//   const data = await res.json();
+//   return {
+//     props: {
+//      data
+//     }
+//   }
+// }
+export async function getServerSideProps(): Promise<{ props: { data: result[] } }> {
   const res = await fetch(defaultEndpoint);
   const data = await res.json();
   return {
     props: {
-     data 
-    }
-  }
+      data: data.results,
+    },
+  };
 }
 
 
 
 
-const Home: NextPage = (data) => {
+const Home: NextPage<{ data: result[] }> = ({ data })  => {
   
   const results = data;
   
@@ -50,15 +59,20 @@ const Home: NextPage = (data) => {
 
         <ul className={styles.grid}>
           
-          {/* {results.map(result => {
-            const  id, name  = result;
-          })} */}
-          
-          <li className={styles.card}>
-          <a href="https://nextjs.org/docs">
-            <h3>Characters</h3>
+          {results.map(result => {
+            const { id, name, image} = result;
+            
+            return (
+              
+              <li key={ id} className={styles.card}>
+                <a href="https://nextjs.org/docs">
+                  <img src={image} alt={`${name}`}/>
+                  <h3>{name }</h3>
           </a>
           </li>
+            )
+          })} 
+         
 
         </ul>
       </main>
