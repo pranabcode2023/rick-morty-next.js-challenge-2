@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 
-const defaultEndpoint = "https://rickandmortyapi.com/api/character/"
+const URL = "https://rickandmortyapi.com/api/character/"
 
 interface result {
   id: string;
@@ -22,7 +22,7 @@ interface result {
 //   }
 // }
 export async function getServerSideProps(): Promise<{ props: { data: result[] } }> {
-  const res = await fetch(defaultEndpoint);
+  const res = await fetch(URL);
   const data = await res.json();
   return {
     props: {
