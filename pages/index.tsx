@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useState } from 'react'
 
 
 const URL = "https://rickandmortyapi.com/api/character/"
@@ -36,8 +37,8 @@ export async function getServerSideProps(): Promise<{ props: { data: result[] } 
 
 const Home: NextPage<{ data: result[] }> = ({ data })  => {
   
-  const results = data;
-  
+  const  results = data;
+
   console.log('data', data)
 
   return (
@@ -64,7 +65,7 @@ const Home: NextPage<{ data: result[] }> = ({ data })  => {
             
             return (
               
-              <li key={ id} className={styles.card}>
+              <li key={id} className={styles.card}>
                 <a href="https://nextjs.org/docs">
                   <img src={image} alt={`${name}`}/>
                   <h3>{name }</h3>
