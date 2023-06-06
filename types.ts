@@ -1,6 +1,6 @@
 export interface GetCharacterResults{
     info: Info;
-    results: Character[]
+    results: Character[];
 }
 
 

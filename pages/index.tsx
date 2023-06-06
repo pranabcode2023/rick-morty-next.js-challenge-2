@@ -124,11 +124,8 @@ const Home: NextPage<{characters: Character[]}> = ({characters})  => {
       {characters.map((character) => {
         return <div key={character.id}>
           <Link href={`/characters/${character.id}`}>
-            <a>
-           <h3>{character.name}</h3> 
-            </a>
-        
-          </Link>
+           <h3>{character.name}</h3>
+         </Link> 
          
           <Image
             loader={imageLoader}
@@ -146,6 +143,7 @@ const Home: NextPage<{characters: Character[]}> = ({characters})  => {
 export const getStaticProps:GetStaticProps = async (context) => {
   const res = await fetch("https://rickandmortyapi.com/api/character")
   const { results }: GetCharacterResults = await res.json();
+ 
   return {
     props: {
       characters: results,
