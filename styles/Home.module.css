@@ -14,6 +14,37 @@
   align-items: center;
 } 
 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button:hover {
+  background-color: #eaeaea;
+}
+
+.pagination button:focus {
+  outline: none;
+}
+
+
+
 .footer {
   display: flex;
   flex: 1;
