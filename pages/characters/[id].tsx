@@ -6,14 +6,20 @@ import { useRouter } from "next/router";
 // import Layout from "../../components/Layout";
 import styles from '../../styles/Character.module.css'
 
-//NOTE - *******[id]*** means  dynamic route 
+//NOTE - *******[id]***   dynamic route 
+
 function CharacterPage({ character }: { character: Character }) {
     
     const router = useRouter();
     console.log(router.query)
+    
     return (
-        <div className={styles.cardContainer}>
-       <Image
+        <div className={styles.container}>
+          <div className={styles.Header}>
+          <h1>{character.name}</h1>
+         </div>
+        <div className={styles.card}>
+          <Image
             loader={imageLoader}
             unoptimized
             src={character.image}
@@ -22,12 +28,23 @@ function CharacterPage({ character }: { character: Character }) {
             height= "200"
        />
       
-    <h1>{character.name}</h1>
-    </div>
-    )
-}
+                <h1>{character.name}</h1>
+                <p>{character.status}</p>
+                <p>{character.species}</p>
+                <p>{character.gender}</p>
 
-export const getServerSideProps:GetServerSideProps= async (context) => {
+    </div>
+</div>
+    )
+};
+
+// CharacterPage.getLayout = function getLayout(page: typeof CharacterPage) {
+//     return <Layout>{page}</Layout>
+// }
+
+
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const res = await fetch(
         `https://rickandmortyapi.com/api/character/${context.query.id}`
     );
@@ -37,7 +54,7 @@ export const getServerSideProps:GetServerSideProps= async (context) => {
             character
         }
     }
-}
+};
 
 
 

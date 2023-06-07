@@ -38,7 +38,8 @@ const Home: NextPage<{ characters: Character[] }> = ({ characters }) => {
           })};
       </div>
     </div>
- );
+ 
+);
 };
 
 export const getStaticProps:GetStaticProps = async (context) => {
