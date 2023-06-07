@@ -1,12 +1,15 @@
-function Layout({children}: {children: React.ReactNode}) {
-    return <div>
+
+
+function Layout({ children }: { children: React.ReactNode }) {
+    return (<div>
         <nav>
             <ul>
                 <li>Home</li>
-           </ul>
+            </ul>
         </nav>
-      {children}
+        {children}
     </div>
-}
+    );
+};
 
 export default Layout

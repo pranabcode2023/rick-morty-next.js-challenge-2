@@ -3,7 +3,7 @@ import imageLoader from "../../imageLoader";
 import { Character } from "../../types";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import Layout from "../../components/Layout";
+// import Layout from "../../components/Layout";
 import styles from '../../styles/Character.module.css'
 
 //NOTE - *******[id]*** means  dynamic route 
@@ -12,16 +12,17 @@ function CharacterPage({ character }: { character: Character }) {
     const router = useRouter();
     console.log(router.query)
     return (
-        <div className={styles.container}>
-        <h1>{character.name}</h1>
-        <Image
+        <div className={styles.cardContainer}>
+       <Image
             loader={imageLoader}
             unoptimized
             src={character.image}
             alt={character.name}
             width="200"
             height= "200"
-        />
+       />
+      
+    <h1>{character.name}</h1>
     </div>
     )
 }
@@ -40,4 +41,4 @@ export const getServerSideProps:GetServerSideProps= async (context) => {
 
 
 
-export default CharacterPage
+export default CharacterPage;
