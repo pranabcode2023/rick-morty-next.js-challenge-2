@@ -3,13 +3,16 @@ import imageLoader from "../../imageLoader";
 import { Character } from "../../types";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Layout from "../../components/Layout";
+import styles from '../../styles/Character.module.css'
 
 //NOTE - *******[id]*** means  dynamic route 
 function CharacterPage({ character }: { character: Character }) {
     
     const router = useRouter();
     console.log(router.query)
-    return <div>
+    return (
+        <div className={styles.container}>
         <h1>{character.name}</h1>
         <Image
             loader={imageLoader}
@@ -20,6 +23,7 @@ function CharacterPage({ character }: { character: Character }) {
             height= "200"
         />
     </div>
+    )
 }
 
 export const getServerSideProps:GetServerSideProps= async (context) => {

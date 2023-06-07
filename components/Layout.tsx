@@ -1,7 +1,9 @@
 function Layout({children}: {children: React.ReactNode}) {
     return <div>
         <nav>
-            <li>Home</li>
+            <ul>
+                <li>Home</li>
+           </ul>
         </nav>
       {children}
     </div>
