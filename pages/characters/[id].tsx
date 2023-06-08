@@ -3,7 +3,6 @@ import imageLoader from "../../imageLoader";
 import { Character } from "../../types";
 import Image from "next/image";
 import { useRouter } from "next/router";
-// import Layout from "../../components/Layout";
 import styles from '../../styles/Character.module.css'
 
 //NOTE - *******[id]***   dynamic route 
@@ -15,9 +14,6 @@ function CharacterPage({ character }: { character: Character }) {
     
     return (
         <div className={styles.container}>
-          <div className={styles.Header}>
-          <h1>{character.name}</h1>
-         </div>
         <div className={styles.card}>
           <Image
             loader={imageLoader}
@@ -26,15 +22,16 @@ function CharacterPage({ character }: { character: Character }) {
             alt={character.name}
             width="200"
             height= "200"
-       />
-      
-                <h1>{character.name}</h1>
-                <p>{character.status}</p>
-                <p>{character.species}</p>
-                <p>{character.gender}</p>
-
-    </div>
-</div>
+            />
+       
+          <h1>{character.name}</h1>
+          <p>{character.status}</p>
+          <p>{character.species}</p>
+          <p>{character.gender}</p>
+        
+          </div>
+          
+     </div>
     )
 };
 

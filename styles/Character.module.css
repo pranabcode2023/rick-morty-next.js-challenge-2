@@ -1,23 +1,17 @@
 
 .container {
-    border: 2px solid red;
-    padding: 0 0;
-    min-height: 100vh;
+    border: 10px solid black;
+    padding: 50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    
 }
 
- .Header {
-     border: 2px solid greenyellow;
-     /* min-height: 100vh;
-     padding: 4rem 0;
-     flex: 1; */
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
- }
 
-
-.card{
+.card  {
     display: flex;
     flex-direction: column;
     justify-content: center;
