@@ -43,6 +43,7 @@ const Home: NextPage<{ characters: Character[], info?: Info }> = ({ characters, 
       <div className={styles.grid}>
         {charList.map((character) => (
           <div key={character.id} className={styles.card}>
+
             <Image
               loader={imageLoader}
               unoptimized
@@ -51,8 +52,9 @@ const Home: NextPage<{ characters: Character[], info?: Info }> = ({ characters, 
               width="200"
               height="200"
             />
-            <Link href={`/characters/${character.id}`}>
-              <h3>{character.name}</h3>
+             <h3>{character.name}</h3>
+             <Link href={`/characters/${character.id}`}>
+             <button>see more</button>
             </Link>
           </div>
         ))}

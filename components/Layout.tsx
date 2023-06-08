@@ -5,7 +5,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <>
       <Navbar />
       {children}
-    </>
+      </>
 );
 };
 

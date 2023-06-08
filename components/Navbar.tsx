@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={styles.Navbar} >
+    <div className={styles.navbar} >
       <div className={styles.topnav}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="/episodes">Episodes</Link>
