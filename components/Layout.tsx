@@ -34,7 +34,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className={styles.Navbar} >
           <div className= {styles.topnav}>
            <Link className={styles.active} href="/">Home</Link>
-           <Link href="/about">About</Link>
+           <Link href="/characters">Characters</Link>
            <Link href="/contact">Contact</Link>
         <div className={styles.searchContainer}>
           <form >
