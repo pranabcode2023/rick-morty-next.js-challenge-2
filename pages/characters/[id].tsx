@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from '../../styles/CharacterPage.module.css'
 
+
 //NOTE - *******[id]***   dynamic route 
 
 function CharacterPage({ character }: { character: Character }) {
@@ -42,7 +43,8 @@ function CharacterPage({ character }: { character: Character }) {
 
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    const res = await fetch(
+   
+   const res = await fetch(
         `https://rickandmortyapi.com/api/character/${context.query.id}`
     );
     const character = await res.json();

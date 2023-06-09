@@ -1,15 +1,3 @@
-// import React from 'react'
-
-// type Props = {}
-
-// const index = (props: Props) => {
-//   return (
-//     <div>index</div>
-//   )
-// }
-
-// export default index
-
 import { useState } from 'react';
 import type { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
@@ -97,7 +85,8 @@ const CharacterList: NextPage<{ characters: Character[], info?: Info }> = ({ cha
 // };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch( "https://rickandmortyapi.com/api/character");
+  const URL=process.env.NEXT_PUBLIC_DB_CONNECT as string;
+  const res = await fetch( URL);
   const { info, results }: GetCharacterResults = await res.json();
   return {
       props: {
