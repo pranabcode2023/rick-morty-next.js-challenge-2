@@ -23,7 +23,7 @@
     padding: 16px 0;
     text-decoration: none;
     font-size: 17px;
-    width: 20%; /* Set the width to 100% */
+    width: 15%; /* width contrl of Navbar */
     box-sizing: border-box; /* Include padding in the width calculation */
   }
   

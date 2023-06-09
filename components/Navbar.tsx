@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link className={styles.active} href="/">Home</Link>
         <Link href="/characters">List of Characters</Link>
         <Link href="/episodes/episodes">Episodes</Link>
-        {/* <Link href="/contact">Contact</Link> */}
+        <Link href="/favourite/favourite">Favourites</Link>
         <div className={styles.searchContainer}>
           <form onSubmit={handleSearch}>
             <input
