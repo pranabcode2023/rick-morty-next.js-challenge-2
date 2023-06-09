@@ -1,4 +1,4 @@
-// import imageLoader from "../../imageLoader";
+// // import imageLoader from "../../imageLoader";
 // import { Character, GetCharacterResults } from "../../types";
 // import Image from "next/image";
 
@@ -9,7 +9,7 @@
 //     return <div>
 //         <h1>{character.name}</h1>
 //         <Image
-//             loader={imageLoader}
+//             // loader={imageLoader}
 //             unoptimized
 //             src={character.image}
 //             alt={character.name}

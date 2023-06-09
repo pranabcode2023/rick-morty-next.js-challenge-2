@@ -1,9 +1,9 @@
 import { GetServerSideProps } from "next";
-import imageLoader from "../../imageLoader";
+// import imageLoader from "../../imageLoader";
 import { Character } from "../../types";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import styles from '../../styles/Character.module.css'
+import styles from '../../styles/CharacterPage.module.css'
 
 //NOTE - *******[id]***   dynamic route 
 
@@ -16,7 +16,7 @@ function CharacterPage({ character }: { character: Character }) {
         <div className={styles.container}>
         <div className={styles.card}>
           <Image
-            loader={imageLoader}
+            // loader={imageLoader}
             unoptimized
             src={character.image}
             alt={character.name}

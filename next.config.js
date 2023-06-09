@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  images: {
-    domains: ["rickandmortyapi.com"],
-    loader: "custom",
-    path: "/",
-  }
+  // images: {
+  //   domains: ["rickandmortyapi.com"],
+  //   loader: "custom",
+  //   path: "/",
+  // }
 }
 
 
