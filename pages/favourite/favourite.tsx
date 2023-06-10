@@ -2,8 +2,9 @@ import React from 'react'
 
 type Props = {}
 
-export default function favourite({}: Props) {
+ function favourite({}: Props) {
   return (
     <div>favourite</div>
   )
 }
+export default favourite;

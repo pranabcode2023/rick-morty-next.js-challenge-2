@@ -3,30 +3,30 @@ import React, { useEffect } from 'react'
 
 import { gql, useQuery } from '@apollo/client';
 
-const GET_EPISODE = gql`
-query getEpisode{
-  characters{
-      results{
-          image
-          name
-          gender
-          location{
-              name
-          }
-          episode{
-            name
-            created
-            characters{
-                name
-                image
-            }
+// const GET_EPISODE = gql`
+// query getEpisode{
+//   characters{
+//       results{
+//           image
+//           name
+//           gender
+//           location{
+//               name
+//           }
+//           episode{
+//             name
+//             created
+//             characters{
+//                 name
+//                 image
+//             }
             
-          }
-      }
-  }
-}
+//           }
+//       }
+//   }
+// }
 
-`;
+// `;
 
 function Episodes({}) {
   // const { loading, error, data } = useQuery(GET_EPISODE);
