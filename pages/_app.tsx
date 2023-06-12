@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ApolloClient, InMemoryCache,ApolloProvider } from '@apollo/client'
+import Episodes from './episodes/episodes';
 
 
 const client = new ApolloClient({
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ApolloProvider client={client}>
      <Layout>
     <Component {...pageProps} />
+    <Episodes/>
     </Layout>
     </ApolloProvider>
   )
