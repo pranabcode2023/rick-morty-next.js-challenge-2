@@ -4,14 +4,11 @@ import type { AppProps } from 'next/app'
 import { ApolloClient, InMemoryCache,ApolloProvider } from '@apollo/client'
 import Episodes from './episodes';
 
-
-const client = new ApolloClient({
-  uri: "https://countries.trevorblades.com/graphql",
-  cache: new InMemoryCache()
-});
-
-
 function MyApp({ Component, pageProps }: AppProps) {
+  const client = new ApolloClient({
+    uri: "https://rickandmortyapi.com/graphql",
+    cache: new InMemoryCache()
+  });
   return (
     <ApolloProvider client={client}>
      <Layout>
