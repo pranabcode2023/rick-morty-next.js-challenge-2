@@ -4,6 +4,8 @@ import { Character } from "../../types";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from '../../styles/CharacterPage.module.css'
+import Link from "next/link";
+import Head from "next/head";
 
 
 //NOTE - *******[id]***   dynamic route 
@@ -15,6 +17,15 @@ function CharacterPage({ character }: { character: Character }) {
     
     return (
         <div className={styles.container}>
+       <div>
+            <Head>
+            <title>{character.name}</title>
+            
+            </Head>
+       
+        <Link href="/">Back to Home</Link>
+       </div>
+            
         <div className={styles.card}>
           <Image
             // loader={imageLoader}

@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className={styles.topnav}>
         <Link className={styles.active} href="/">Home</Link>
         <Link href="/characters">List of Characters</Link>
-        <Link href="/episodes/episodes">Episodes</Link>
+        <Link href="/episodes">Episodes</Link>
         <Link href="/favourite/favourite">Favourites</Link>
         <div className={styles.searchContainer}>
           <form onSubmit={handleSearch}>

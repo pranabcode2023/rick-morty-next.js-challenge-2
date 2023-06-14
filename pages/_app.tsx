@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ApolloClient, InMemoryCache,ApolloProvider } from '@apollo/client'
-import Episodes from './episodes/episodes';
+import Episodes from './episodes';
 
 
 const client = new ApolloClient({
