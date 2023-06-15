@@ -7,7 +7,7 @@
 import type { IGraphQLConfig } from 'graphql-config'
  
 const config: IGraphQLConfig = {
-  schema: 'https://localhost:8000'
+  schema: "https://rickandmortyapi.com/graphql"
 }
  
 export default config
