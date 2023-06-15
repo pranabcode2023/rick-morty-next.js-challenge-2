@@ -30,11 +30,12 @@ const Episodes = () => {
     <div>
       {data.episodes.results.map((result: any) => (
         <div key={result.id}>
-          {result.characters.map((c) => {
+          {result.characters.map((character) => {
             return (
-              <div key={c.id}>
-                {" "}
-                <p>{c.name}</p>
+              <div key={character.id}>
+                <p>{result.created}</p>
+                <p>{character.name}</p>
+                <img src={character.image} alt={character.name}></img>
               </div>
             );
           })}
