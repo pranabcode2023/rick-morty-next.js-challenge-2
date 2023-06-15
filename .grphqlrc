@@ -1,13 +1,3 @@
-// {
-//   "schema":  "https://rickandmortyapi.com/graphql"
-
-// }
-
-
-import type { IGraphQLConfig } from 'graphql-config'
- 
-const config: IGraphQLConfig = {
-  schema: "https://rickandmortyapi.com/graphql"
+{
+  "schema":  "https://rickandmortyapi.com/graphql"
 }
- 
-export default config
