@@ -30,7 +30,7 @@ const Episodes = () => {
     <div>
       {data.episodes.results.map((result: any) => (
         <div key={result.id}>
-          {result.characters.map((character) => {
+          {result.characters.map((character: any) => {
             return (
               <div key={character.id}>
                 <p>{result.created}</p>
