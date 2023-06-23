@@ -33,7 +33,7 @@ const Episodes = () => {
           {result.characters.map((character: any) => {
             return (
               <div key={character.id}>
-                <p>{result.created}</p>
+                {/* <p>{result.created}</p> */}
                 <p>{character.name}</p>
                 <img src={character.image} alt={character.name}></img>
               </div>
