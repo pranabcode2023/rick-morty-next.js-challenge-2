@@ -14,14 +14,14 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {/* Welcome to <a href="https://nextjs.org">Next.js!</a> */}
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
           Welcome to <a href="https://nextjs.org">Rick & Morty APP</a>
         </h1>
 
-        {/* <p className={styles.description}>
-          Get started by editing{' '}
+        <p className={styles.description}>
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
-        </p> */}
+        </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
