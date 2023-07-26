@@ -43,11 +43,13 @@
     border: 2px solid red;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    gap: 3px;
-    padding: 10px;
+    gap: 5px;
+    padding: 5px;
+  
   }
   
   .card {
+    
     border: 2px solid black;
     margin: 1rem;
     padding: 1.5rem;
@@ -56,7 +58,8 @@
     text-decoration: none;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 300px;
+    max-width: 250px;
+    margin-left: 50px;
   }
   
   .card:hover,
