@@ -16,18 +16,9 @@ function CharacterPage({ character }: { character: Character }) {
     console.log(router.query)
     
     return (
-        <div className={styles.container}>
-       <div>
-            <Head>
-            <title>{character.name}</title>
-            
-            </Head>
-       
-        <Link href="/">Back to Home</Link>
-       </div>
-            
+       <div className={styles.container}>
         <div className={styles.card}>
-          <Image
+                <Image
             // loader={imageLoader}
             unoptimized
             src={character.image}
@@ -35,13 +26,19 @@ function CharacterPage({ character }: { character: Character }) {
             width="200"
             height= "200"
             />
-       
-          <h1>{character.name}</h1>
+         <h3>{character.name}</h3>
+      
           <p>{character.status}</p>
           <p>{character.species}</p>
           <p>{character.gender}</p>
-        
-          </div>
+      </div>
+
+      <div>
+         <Link href="/characters">
+         <button>Back to chracter list</button>
+         </Link>
+     </div>
+
           
      </div>
     )
