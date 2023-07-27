@@ -19,6 +19,7 @@
     grid-template-columns: auto auto auto auto auto;
     padding: 10px;
     border: 2px solid red;
+    overflow: hidden;
 }
   
   .gridCard {
