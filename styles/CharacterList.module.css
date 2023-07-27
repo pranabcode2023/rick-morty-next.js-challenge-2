@@ -1,14 +1,53 @@
-/* .container {
+.Header {
+  /* border: 2px solid rgb(10, 14, 3); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.pageContainer{
+  border: 2px solid black;
+}
+
+
+.gridContainer{
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
     border: 2px solid red;
-    padding: 0;
+}
+  
+  .gridCard {
+    border: 2px solid orange;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 250px;
+    margin-left: 20px;
   }
-   */
-  .Header {
-    border: 2px solid rgb(10, 14, 3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  
+  
+  .gridCard:hover,
+  .gridCard:focus,
+  .gridCard:active {
+    color: #0070f3;
+    border-color: #0070f3;
+  }
+  
+  .gridCard h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .gridCard p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
   }
   
   .pagination {
@@ -39,49 +78,9 @@
     outline: none;
   }
   
-  .grid {
-    border: 2px solid red;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 5px;
-    padding: 5px;
-  
-  }
-  
-  .card {
-    
-    border: 2px solid black;
-    margin: 1rem;
-    padding: 1.5rem;
-    text-align: center;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 250px;
-    margin-left: 50px;
-  }
-  
-  .card:hover,
-  .card:focus,
-  .card:active {
-    color: #0070f3;
-    border-color: #0070f3;
-  }
-  
-  .card h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-  }
-  
-  .card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
   
   @media (max-width: 600px) {
-    .grid {
+    .gridContainer {
       grid-template-columns: auto;
       justify-items: center;
     }
@@ -91,7 +90,7 @@
       align-items: center;
     }
   
-    .card {
+    .gridCard {
       max-width: 100%;
     }
   }
